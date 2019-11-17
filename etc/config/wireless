@@ -1,0 +1,42 @@
+
+config wifi-device 'radio0'
+	option type 'mac80211'
+	option hwmode '11a'
+	option path 'pci0000:00/0000:00:00.0'
+	option country 'US'
+	option legacy_rates '1'
+	option disabled '0'
+	option channel '36'
+	option htmode 'HT40'
+
+config wifi-device 'radio1'
+	option type 'mac80211'
+	option hwmode '11g'
+	option path 'platform/qca956x_wmac'
+	option htmode 'HT20'
+	option country 'US'
+	option legacy_rates '1'
+	option disabled '0'
+	option channel '6'
+
+config wifi-iface
+	option device 'radio0'
+	option mode 'ap'
+	option ssid 'ICPC_ADM_BKP'
+	option network 'ICPC_ADM_P3'
+	option macfilter 'allow'
+	option encryption 'psk-mixed'
+	option key 'KOv06lEJrj5DI/G5+FmkEXsMTQQBAzEH'
+	option hidden '1'
+	list maclist '6C:88:14:15:D8:A4'
+	list maclist 'a8:9c:ed:70:f3:9b'
+
+config wifi-iface
+	option network 'wwan_icpc'
+	option ssid 'ICPC_BKP_WWAN'
+	option encryption 'psk2'
+	option device 'radio1'
+	option mode 'sta'
+	option bssid '14:94:48:09:D9:3B'
+	option key 'Y4bw6hVea7T0U3R'
+
