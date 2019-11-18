@@ -24,6 +24,7 @@ In a practical sense, any wireless router will do the trick but this one hits th
 ![Virtual Interfaces](./images/interfaces.png)
 
 Details of the implementation:
+
 | Interface      | Firewall Zone | Wired ports | Wireless Ports | IP Ranges        | Protocol       | Usage                                    |
 |----------------|---------------|-------------|----------------|------------------|----------------|------------------------------------------|
 | ICPC_ADM_P3    | eth0.3        | LAN3        | ICPC_ADM_BKP   | 192.168.10.0/24  | Static Address | Administration                           |
@@ -31,6 +32,7 @@ Details of the implementation:
 | LAN            | lan           | LAN1, LAN2  | ICPC_ISO_WLAN  | 192.168.20.1     | Static Address | General Purpose wired LAN for main staff |
 | WAN            | wan           | WAN         |                |                  | DHCP Client    | Wired WAN connection                     |
 | WWAN_ICPC      | wan           |             | ICPC_BKP_WWAN  |                  | DHCP Client    | Wireless WAN connection                  |
+
 
 ## Features to be considered
 ### Local tunneling for LuCi and dedicated administrative VLAN port
